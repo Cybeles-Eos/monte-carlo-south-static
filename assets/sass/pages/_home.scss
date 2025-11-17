@@ -1,0 +1,70 @@
+@use "../component/typography" as *;
+@use "../component/color" as *;
+
+.page--home{
+   .section{
+      &--hero{
+         width: 100%;
+         height: 680px;
+         background-image: url('../../images/home-hero-bg.png');
+         background-position: center;
+         background-size: cover;
+         color: $color-white;
+         padding: 0 1rem;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+
+         &__pre-title{
+            text-transform: uppercase;
+            font-weight: 600;
+
+         }
+         h1{
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 20px;
+         }
+         &__label{
+            max-width: 710px;
+            text-align: center;
+            font-weight: 400 !important;
+         }
+         &__rating{
+            margin-bottom: 20px;
+            svg{
+               margin-bottom: 4px;
+               margin-right: 4px;
+            }
+         }
+         .btn-glass{
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: hsla(0, 0%, 100%, 0.226);
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 10px 17px;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: 300ms;
+            &:hover{
+               background-color: hsla(0, 0%, 100%, 0.361);
+            }
+         }
+         @media (max-width: 540px) {
+            height: auto;
+            padding: 7rem 1rem;
+            align-items: flex-start;
+            &__pre-title,
+            h1,
+            &__label,
+            &__rating{
+               text-align: start;
+            }
+
+         }
+      }
+   }
+}

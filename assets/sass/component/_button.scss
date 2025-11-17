@@ -7,16 +7,18 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    padding: 10px 15px;
+    padding: 10px 17px;
+    text-transform: capitalize;
     border: 1px solid $color-primary;
-    border-radius: 50px;
+    border-radius: 5px;
     &--primary {
         background-color: $color-primary;
-        color: #fff;
-        &:hover {
-            background-color: initial;
-            color: $color-primary;
-        }
+        color: $color-secondary;
+        font-weight: 600;
+        // &:hover {
+        //     background-color: initial;
+        //     color: $color-primary;
+        // }
     }
 
     &--secondary {
