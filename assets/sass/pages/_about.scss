@@ -1,0 +1,379 @@
+@use "../component/typography" as *;
+@use "../component/color" as *;
+
+.page--about{
+   .section{
+      &--hero{
+         width: 100%;
+         height: 500px;
+         background-image: url('../../images/about-hero.png');
+         background-position: center;
+         background-size: cover;
+         // background-color: $color-primary;
+         
+         .wrapper{
+            padding: 112px 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            h1{
+               max-width: 760px;
+               text-align: center;
+               color: $color-white;
+            }
+            p{
+               color: $color-white;
+               max-width: 680px;
+               text-align: center;
+            }
+         }
+         @media (max-width: 592px) {
+            padding-block: 20px;
+            height: auto;
+         }
+         @media (max-width: 692px) {
+
+         }
+      }
+      &--why-us{
+         width: 100%;
+         // background-color: $color-secondary;
+         padding-block: 140px;
+         position: relative;
+         overflow: hidden;
+
+         .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            color: $color-white;
+
+            h2{
+               text-align: center;
+               margin-bottom: 5px;
+            }
+            p{
+               text-align: center;
+               max-width: 720px;
+            }
+         }  
+
+         .vector-1{
+            position: absolute;
+            top: -5rem;
+            left: -5rem;
+            width: 230px;
+         }
+         .vector-2{
+            position: absolute;
+            top: 20%;
+            transform: translateY(-10%);
+            right: -4rem;
+            width: 300px;
+            rotate: -80deg;
+
+            @media (max-width: 592px) {
+               top: 40%;
+            }
+         }
+      }
+      &--our-mv{
+         width: 100%;
+         padding-block: 112px;
+
+         .wrapper{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+
+            .pa-s-omv-detail{
+               color: $color-white;
+
+               h2{
+                  max-width: 610px;
+               }
+               &__label{
+                  max-width: 570px;
+               }
+               &__box{
+                  padding: 35px 25px 25px 25px;
+                  display: flex;
+                  flex-direction: column;
+                  position: relative;
+                  // align-items: center;
+                  border-radius: 10px;
+                  background-color: #070707;
+                  margin-top: 2.5rem;
+                  max-width: 586px;
+                  .quote-icon{
+                     position: absolute;
+                     top: -1.2rem;
+                     left: -.77rem;
+                     width: 50px;
+                  }
+                  .testimonial-details{
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     width: 100%;
+                     margin-top: .5rem;
+                     &__info{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        img{
+                           width: 50px;
+                           height: 50px;
+                           object-fit: cover;
+                           object-position: center;
+                           border-radius: 55px;
+                        }
+                        div{
+                           display: flex;
+                           flex-direction: column;
+                           gap: -1px;
+                           .testimonial--name{
+                              font-size: 16px;
+                              color: #fff;
+                              font-weight: 600;
+                              margin: 0;
+                           }                
+                           .testimonial--date{
+                              font-size: 14px;
+                              color: #949494;
+                              font-weight: 400;
+                              margin: 0;
+                           }
+
+                        }
+                     }
+                     &__stars{
+                        display: flex;
+                        align-items: center;
+                        gap: 1px;
+                     }
+                     @media (max-width: 492px) {
+                        flex-direction: column;
+                        row-gap: 1rem;
+                        align-items: flex-start;
+                     }
+                  }
+               }
+            }
+            .pa-s-omv-infos{
+               width: 650px;
+               display: grid;
+               grid-template-columns: 1fr 1fr;
+               gap: 1rem;
+               row-gap: 1.3rem;
+
+               &__box{
+                  border-radius: 8px;
+                  border: 1px solid #393838;
+                  padding: 33px;
+
+                  &__icon{
+                     width: 45px;
+                     height: 45px;
+                     border-radius: 50px;
+                     background-color: $color-primary;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     margin-bottom: 5px;
+                     margin-bottom: 15px;
+                  }
+                  h3{
+                     color: $color-white;
+                  }
+                  p{
+                     max-width: 230px;
+                     color: $color-white;
+                     margin: 0;
+                  }
+               }
+               @media (max-width: 692px) {
+                  grid-template-columns: 1fr;
+               }
+            }
+            @media (max-width: 992px){
+               flex-direction: column;
+
+               .pa-s-omv-detail{
+                  h2{
+                     max-width: 100%;
+                  }
+                  &__label{
+                     max-width: 100%;
+                  }
+                  &__box{
+                     max-width: 100%;
+                  }
+               }
+               .pa-s-omv-infos{
+                  width: 100%;
+
+                  p{
+                     max-width: 100%;
+                  }
+               }
+            }
+         }
+      }
+      &--why-trust{
+         width: 100%;
+         padding: 112px 0rem;
+         padding-top: 80px;
+         .wrapper{
+            display: flex;
+            gap: 60px;
+            align-items: center;
+            justify-content: space-between;
+
+            .pa-sws-image{
+               width: 50%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+
+               @media (max-width: 992px) {
+                  // height: fit-content;
+
+                  padding-inline: 5rem;
+                  img{
+                     rotate: 90deg;
+                  }
+               }
+               @media (max-width: 492px) {
+                  padding-inline: 3rem;
+               }
+            }
+            .pa-sws-detail{
+               width:600px;
+               display: flex;
+               flex-direction: column;
+               // gap: 20px;
+               h2{
+                  color: $color-white;
+                  max-width: 600px;
+                  margin-bottom: 1.5rem;
+               }
+               &__label{
+                  max-width: 550px;
+                  color: $color-white;
+                  margin-bottom: 1.5rem;
+               }
+               &__box{
+                  margin-bottom: 1.2rem;
+                  display: flex;
+                  gap: 15px;
+                  svg{
+                     margin-top: 3px;
+                  }
+                  p{
+                     max-width: 480px;
+                     color: $color-white;
+                     font-weight: 400;
+                     margin-bottom: 0;
+                  }
+               }
+               .btns-container{
+                  margin-top: 2rem;
+               }
+            }
+            @media (max-width: 992px) {
+               flex-direction: column;
+               gap: 0px;
+               .pa-sws-image{
+                  width: 100%;
+               }
+               .pa-sws-detail{
+                  width: 100%;
+                  margin-top: 1.2rem;
+                  h2,
+                  h4,
+                  p{
+                     max-width: 992px;
+                  }
+               }
+            }
+         }
+         @media (max-width: 992px){
+            padding-top: 20px;
+         }
+      }
+      &--featured-service{
+         width: 100%;
+         padding-block: 112px;
+         position: relative;
+
+         .wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color-white;
+            h2{
+               max-width: 612px;
+               text-align: center;
+               margin-bottom: 2rem;
+            }
+            .pa-fs-w-label{
+               max-width: 667px;
+               text-align: center;
+            }
+            .pa-fs-w-con{
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+               gap: 40px;
+               margin-top: 3rem;
+
+               &__box{
+                  background-color: #070707;
+                  border-radius: 8px;
+                  overflow: hidden;
+
+                  // &__img{
+                  //    max-width: 100%;
+                  // }
+                  &__detail{
+                     padding: 30px 25px;
+                     display: flex;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     div{
+                        margin-bottom: 1rem;
+                     }
+                     a{
+                        color: $color-primary;
+                        text-decoration: none;
+                     }
+                  }
+
+               }
+               @media (max-width: 992px) {
+                  grid-template-columns: 1fr 1fr;
+                  gap: 30px;
+               }
+               @media (max-width: 692px) {
+                  grid-template-columns: 1fr;
+                  gap: 20px;
+                  &__box{
+
+                     &__img{
+                        max-width: 100%;
+                        img{
+                           width: 100%;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -38,6 +38,15 @@ img {
     margin-bottom: 26px;
 }
 
+.global--pre-title{
+    color: $color-gray;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-family: $font-secondary;
+    margin-bottom: 12px;
+}
+
 p{
     font-size: 16px;
     font-weight: 500;
@@ -65,13 +74,39 @@ h2 {
     font-weight: 600;
     line-height: 110%;
     margin-bottom: 20px;
-
+    font-family: $font-secondary;
     @media(max-width:992px) {
-        font-size: 38px;
+        font-size: 35px;
     }
     span {
         color: $color-primary;
     }
+}
+h3{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 110%;
+    @media(max-width:992px) {
+        font-size: 25px;
+    }
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 110%;
+    font-family: $font-secondary;
+    @media(max-width:992px) {
+        font-size: 20px;
+    }
+    span {
+        color: $color-primary;
+    }
+}
+
+img{
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .global--form {
@@ -117,6 +152,11 @@ h2 {
 .btns-container{
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 492px) {
+        flex-direction: column;
+        // align-items: flex-start;
+    }
 }
 
 .top-bar{
@@ -194,5 +234,23 @@ h2 {
         height: 85px !important;
         position: relative;
         z-index: 9999;
+    }
+}
+
+.main--cta{
+    background-image: url('../../images/cta-bg.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+
+    .wrapper{
+        padding: 112px 1rem;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+        p{
+            max-width: 620px;
+        }
     }
 }
